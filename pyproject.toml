@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stream-json"
+version = "0.1.0"
+description = "Parse JSON as it streams and report exactly where a truncated document stopped."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "khawajasafiullah18" }]
+dependencies = []
+keywords = ["json", "streaming", "llm", "parsing", "incremental"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Quality Assurance",
+  "Environment :: Console",
+]
+
+[project.urls]
+Homepage = "https://github.com/aiplusplus360/stream-json"
+
+[project.scripts]
+stream-json = "streamjson.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["streamjson*"]
